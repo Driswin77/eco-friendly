@@ -1,0 +1,153 @@
+:root {
+    --primary-green: #2ecc71;
+    --dark-green: #27ae60;
+    --danger-red: #e74c3c;
+    --bg-color: #f0fdf4; /* Light mint background */
+    --text-color: #2c3e50;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Item Grid Styles */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.item-btn {
+    background: var(--card-bg);
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.item-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-green);
+    box-shadow: 0 8px 15px rgba(46, 204, 113, 0.2);
+}
+
+/* Result Card Styles */
+.result-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    animation: slideUp 0.4s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.status-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.details p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.alternative-box {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid var(--dark-green);
+    text-align: left;
+}
+
+#resetBtn {
+    margin-top: 25px;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#resetBtn:hover {
+    background-color: #1a252f;
+}
+
+/* Dynamic Classes for States */
+.is-eco .badge { background-color: var(--primary-green); }
+.is-harmful .badge { background-color: var(--danger-red); }
+
+/* Animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+}

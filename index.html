@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is This Eco-Friendly?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🌱 Is This Eco-Friendly?</h1>
+            <p>Select an everyday item to learn about its impact on our planet.</p>
+        </header>
+
+        <main>
+            <div class="item-grid" id="itemGrid">
+                <button class="item-btn" data-item="plastic_bag">🛍️ Plastic Bag</button>
+                <button class="item-btn" data-item="cloth_bag">👜 Cloth Bag</button>
+                <button class="item-btn" data-item="paper_cup">☕ Paper Cup</button>
+                <button class="item-btn" data-item="glass_bottle">🍾 Glass Bottle</button>
+                <button class="item-btn" data-item="thermocol">🍽️ Thermocol Plate</button>
+                <button class="item-btn" data-item="battery">🔋 Battery</button>
+                <button class="item-btn" data-item="led_bulb">💡 LED Bulb</button>
+                <button class="item-btn" data-item="plastic_straw">🥤 Plastic Straw</button>
+            </div>
+
+            <div id="resultCard" class="result-card hidden">
+                <div class="status-icon" id="statusIcon"></div>
+                <h2 id="itemName">Item Name</h2>
+                <div class="badge" id="ecoBadge">Status</div>
+                
+                <div class="details">
+                    <p id="impactText">Impact description goes here.</p>
+                    
+                    <div class="alternative-box" id="altBox">
+                        <strong>✅ Better Choice:</strong> <span id="alternativeText">Alternative goes here</span>
+                    </div>
+                </div>
+                
+                <button id="resetBtn">Check Another Item</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Small choices make a big difference. 🌍</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
